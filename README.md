@@ -25,7 +25,7 @@ A small JavaScript program shows how a private key k generates a public key Q = 
 
 ### How to run
 
-**Online:** open the [https://marti2006.github.io/statistics-hw/hw1/]
+**Online:** open the [link](https://marti2006.github.io/statistics-hw/hw1/)
 
 ## HW 2 – Ethereum pipeline: from mnemonic to address
 

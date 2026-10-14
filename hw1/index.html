@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toy Elliptic Curve: Private Key to Public Key</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Private key → public key</h1>
+  <p>Toy curve <b>y² = x³ + 7 (mod 17)</b>: the same equation as secp256k1 (used by Ethereum), with a tiny prime.</p>
+  <p><a href="stats.html">Statistical exploration →</a></p>
+
+  <label>Private key k <input type="number" id="k" min="1" value="6"></label>
+  <label>Base point G <select id="base"></select></label>
+  <label>Method
+    <select id="method">
+      <option value="naive">Naive: G, 2G, 3G, ..., kG</option>
+      <option value="double">Double-and-add</option>
+    </select>
+  </label>
+  <button id="compute">Compute</button>
+
+  <p id="error" class="error"></p>
+  <p id="info"></p>
+  <p id="result" class="result"></p>
+
+  <table id="steps">
+    <thead><tr><th>#</th><th>Operation</th><th>Bit</th><th>Multiple</th><th>Point</th></tr></thead>
+    <tbody></tbody>
+  </table>
+
+  <script src="curve.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

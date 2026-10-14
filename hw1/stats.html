@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistical Exploration of k → kG</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Statistical exploration of k → kG</h1>
+  <p>Random private keys k are mapped to Q = kG and the coordinates of Q are analysed. <a href="index.html">← Back</a></p>
+
+  <label>Curve
+    <select id="curve">
+      <option value="17">p = 17, G = (1, 5), order 9</option>
+      <option value="10007" selected>p = 10007, G = (5, 566), order 10008</option>
+    </select>
+  </label>
+  <label>Samples <input type="number" id="samples" value="5000" min="100" max="50000"></label>
+  <button id="run">Run experiments</button>
+  <p id="summary"></p>
+
+  <section><h2>1. Distribution of x and y</h2><canvas id="c1"></canvas><p id="r1"></p></section>
+  <section><h2>2. Frequency of individual x values</h2><canvas id="c2"></canvas><p id="r2"></p></section>
+  <section><h2>3. Distribution of the bits of x</h2><canvas id="c3"></canvas><p id="r3"></p></section>
+  <section><h2>4. Correlation between k and x</h2><canvas id="c4"></canvas><p id="r4"></p></section>
+  <section><h2>5. Avalanche effect</h2><canvas id="c5"></canvas><p id="r5"></p></section>
+  <section><h2>6. Algebraic structure</h2><canvas id="c6"></canvas><p id="r6"></p></section>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+  <script src="curve.js"></script>
+  <script src="stats.js"></script>
+</body>
+</html>

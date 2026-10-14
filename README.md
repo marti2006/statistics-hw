@@ -29,8 +29,7 @@ A small JavaScript program shows how a private key k generates a public key Q = 
 
 ## HW 2 – Ethereum pipeline: from mnemonic to address
 
-A written report on the cryptographic pipeline used by Ethereum wallets:
-[Report](hmwk2/Ethereum_pipeline.pdf)
+A written [report](hw2/Ethereum_pipeline.pdf) on the cryptographic pipeline used by Ethereum wallets:
 
 ```
 Mnemonic ─BIP-39─▶ Seed ─BIP-32/BIP-44─▶ Private key ─secp256k1─▶ Public key ─Keccak-256─▶ Address ─EIP-55─▶ Checksummed address
